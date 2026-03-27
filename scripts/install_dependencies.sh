@@ -1,11 +1,12 @@
 #!/bin/bash
+set -e
 
-# Update packages
+echo "Installing Apache..."
+
 apt update -y
-
-# Install Apache
 apt install -y apache2
 
-# Start Apache
 systemctl start apache2
 systemctl enable apache2
+
+echo "Apache installed and running"
